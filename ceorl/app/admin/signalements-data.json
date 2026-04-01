@@ -1,0 +1,2002 @@
+[
+  {
+    "id": "S-001",
+    "category": "Voirie",
+    "description": "Nid de poule profond angle rue Jean Jaurès / Av. Darblay",
+    "lat": 48.607161,
+    "lng": 2.477608,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "high"
+  },
+  {
+    "id": "S-002",
+    "category": "Propreté",
+    "description": "Dépôt sauvage de gravats près du parc Robinson",
+    "lat": 48.599745,
+    "lng": 2.47279,
+    "status": "en_cours",
+    "date": "2026-03-30",
+    "severity": "medium"
+  },
+  {
+    "id": "S-003",
+    "category": "Éclairage",
+    "description": "Lampadaire éteint depuis 2 semaines, rue Widmer",
+    "lat": 48.608367,
+    "lng": 2.481466,
+    "status": "nouveau",
+    "date": "2026-03-29",
+    "severity": "medium"
+  },
+  {
+    "id": "S-004",
+    "category": "Nuisances",
+    "description": "Nuisances sonores nocturnes récurrentes, quartier Tarterêts",
+    "lat": 48.603054,
+    "lng": 2.483784,
+    "status": "en_cours",
+    "date": "2026-03-28",
+    "severity": "low"
+  },
+  {
+    "id": "S-005",
+    "category": "Voirie",
+    "description": "Fissure importante chaussée bd Jean Jaurès",
+    "lat": 48.610146,
+    "lng": 2.481539,
+    "status": "resolu",
+    "date": "2026-03-27",
+    "severity": "high"
+  },
+  {
+    "id": "S-006",
+    "category": "Espaces Verts",
+    "description": "Arbre tombé bloquant le trottoir, allée des Platanes",
+    "lat": 48.600145,
+    "lng": 2.457694,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "high"
+  },
+  {
+    "id": "S-007",
+    "category": "Propreté",
+    "description": "Poubelles débordantes près de la gare",
+    "lat": 48.603886,
+    "lng": 2.482778,
+    "status": "en_cours",
+    "date": "2026-03-30",
+    "severity": "medium"
+  },
+  {
+    "id": "S-008",
+    "category": "Stationnement",
+    "description": "Véhicule abandonné depuis 3 mois, rue Champlouis",
+    "lat": 48.601569,
+    "lng": 2.484575,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "low"
+  },
+  {
+    "id": "S-009",
+    "category": "Pollution",
+    "description": "Odeurs de carburant le long de l'Avenue du Président Wilson",
+    "lat": 48.571653,
+    "lng": 2.475833,
+    "status": "nouveau",
+    "date": "2026-03-30",
+    "severity": "high"
+  },
+  {
+    "id": "S-010",
+    "category": "Circulation",
+    "description": "Embouteillage permanent à l'intersection rue Pierre Curie / rue des Écoles",
+    "lat": 48.589608,
+    "lng": 2.472,
+    "status": "en_cours",
+    "date": "2026-03-29",
+    "severity": "medium"
+  },
+  {
+    "id": "S-011",
+    "category": "Éclairage",
+    "description": "Réverbère clignotant boulevard des Hêtres",
+    "lat": 48.603358,
+    "lng": 2.472688,
+    "status": "nouveau",
+    "date": "2026-03-28",
+    "severity": "medium"
+  },
+  {
+    "id": "S-012",
+    "category": "Sécurité",
+    "description": "Tag vandale sur mur d'école élémentaire Jean Moulin",
+    "lat": 48.610112,
+    "lng": 2.446156,
+    "status": "resolu",
+    "date": "2026-03-26",
+    "severity": "low"
+  },
+  {
+    "id": "S-013",
+    "category": "Eau Potable",
+    "description": "Fuite importante sur canalisation rue du Port",
+    "lat": 48.607606,
+    "lng": 2.46762,
+    "status": "en_cours",
+    "date": "2026-03-30",
+    "severity": "high"
+  },
+  {
+    "id": "S-014",
+    "category": "Voirie",
+    "description": "Trottoir effondré près de l'arrêt de bus central",
+    "lat": 48.61275,
+    "lng": 2.483526,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "high"
+  },
+  {
+    "id": "S-015",
+    "category": "Espaces Verts",
+    "description": "Massacre des haies dans le square Jules Ferry",
+    "lat": 48.591341,
+    "lng": 2.473099,
+    "status": "en_cours",
+    "date": "2026-03-29",
+    "severity": "medium"
+  },
+  {
+    "id": "S-016",
+    "category": "Propreté",
+    "description": "Graffitis et déjections canines sur la place du Marché",
+    "lat": 48.619606,
+    "lng": 2.469158,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "medium"
+  },
+  {
+    "id": "S-017",
+    "category": "Circulation",
+    "description": "Feu tricolore hors service à l'angle des rues Pasteur et Victor Hugo",
+    "lat": 48.592834,
+    "lng": 2.480701,
+    "status": "en_cours",
+    "date": "2026-03-28",
+    "severity": "high"
+  },
+  {
+    "id": "S-018",
+    "category": "Stationnement",
+    "description": "Stationnement illicite dans la zone réservée aux bus rue du Commerce",
+    "lat": 48.599296,
+    "lng": 2.474561,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "low"
+  },
+  {
+    "id": "S-019",
+    "category": "Pollution",
+    "description": "Niveaux de poussière élevés sur l'avenue des Marronniers",
+    "lat": 48.605149,
+    "lng": 2.451479,
+    "status": "en_cours",
+    "date": "2026-03-30",
+    "severity": "medium"
+  },
+  {
+    "id": "S-020",
+    "category": "Sécurité",
+    "description": "Caméra de surveillance défectueuse place de la République",
+    "lat": 48.622758,
+    "lng": 2.461877,
+    "status": "nouveau",
+    "date": "2026-03-29",
+    "severity": "medium"
+  },
+  {
+    "id": "S-021",
+    "category": "Eau Potable",
+    "description": "Mauvaise odeur d'eau aux robinets du lotissement du Parc",
+    "lat": 48.605036,
+    "lng": 2.453238,
+    "status": "en_cours",
+    "date": "2026-03-30",
+    "severity": "high"
+  },
+  {
+    "id": "S-022",
+    "category": "Voirie",
+    "description": "Marquage au sol effacé sur passage piéton principal",
+    "lat": 48.599432,
+    "lng": 2.479056,
+    "status": "resolu",
+    "date": "2026-03-27",
+    "severity": "low"
+  },
+  {
+    "id": "S-023",
+    "category": "Nuisances",
+    "description": "Musique à plein volume dans la nuit près de la zone commerciale",
+    "lat": 48.598924,
+    "lng": 2.479953,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "high"
+  },
+  {
+    "id": "S-024",
+    "category": "Circulation",
+    "description": "Accident fréquent aux abords du rond-point des Tulipes",
+    "lat": 48.611883,
+    "lng": 2.440485,
+    "status": "en_cours",
+    "date": "2026-03-29",
+    "severity": "high"
+  },
+  {
+    "id": "S-025",
+    "category": "Espaces Verts",
+    "description": "Jeux pour enfants détériorés dans le parc des Quatre Saisons",
+    "lat": 48.600019,
+    "lng": 2.463077,
+    "status": "nouveau",
+    "date": "2026-03-30",
+    "severity": "medium"
+  },
+  {
+    "id": "S-026",
+    "category": "Stationnement",
+    "description": "Zone de livraison obstruée par des véhicules sur la rue de l'Église",
+    "lat": 48.610157,
+    "lng": 2.466638,
+    "status": "en_cours",
+    "date": "2026-03-29",
+    "severity": "medium"
+  },
+  {
+    "id": "S-027",
+    "category": "Propreté",
+    "description": "Déchets ménagers non collectés derrière la bibliothèque municipale",
+    "lat": 48.598205,
+    "lng": 2.461008,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "high"
+  },
+  {
+    "id": "S-028",
+    "category": "Sécurité",
+    "description": "Éclairage public insuffisant autour du passage souterrain",
+    "lat": 48.602186,
+    "lng": 2.455444,
+    "status": "en_cours",
+    "date": "2026-03-30",
+    "severity": "medium"
+  },
+  {
+    "id": "S-029",
+    "category": "Pollution",
+    "description": "Odeurs d'égout persistantes près du parking souterrain",
+    "lat": 48.606726,
+    "lng": 2.449876,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "high"
+  },
+  {
+    "id": "S-030",
+    "category": "Eau Potable",
+    "description": "Baisse de pression d'eau secteur boulevard Victor Hugo",
+    "lat": 48.601214,
+    "lng": 2.488681,
+    "status": "en_cours",
+    "date": "2026-03-29",
+    "severity": "medium"
+  },
+  {
+    "id": "S-031",
+    "category": "Stationnement",
+    "description": "Automobilistes garés sur piste cyclable rue Hoche",
+    "lat": 48.613235,
+    "lng": 2.462931,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "high"
+  },
+  {
+    "id": "S-032",
+    "category": "Voirie",
+    "description": "Affaissement du trottoir près de la mairie",
+    "lat": 48.606973,
+    "lng": 2.477196,
+    "status": "en_cours",
+    "date": "2026-03-30",
+    "severity": "medium"
+  },
+  {
+    "id": "S-033",
+    "category": "Propreté",
+    "description": "Vandalisme et détritus autour du parc du Château",
+    "lat": 48.617553,
+    "lng": 2.461288,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "medium"
+  },
+  {
+    "id": "S-034",
+    "category": "Éclairage",
+    "description": "Panne sur une rangée de réverbères rue de l'Industrie",
+    "lat": 48.613204,
+    "lng": 2.451389,
+    "status": "nouveau",
+    "date": "2026-03-29",
+    "severity": "medium"
+  },
+  {
+    "id": "S-035",
+    "category": "Nuisances",
+    "description": "Stations de livraison bruyantes la nuit boulevard des Acacias",
+    "lat": 48.609508,
+    "lng": 2.467554,
+    "status": "en_cours",
+    "date": "2026-03-30",
+    "severity": "high"
+  },
+  {
+    "id": "S-036",
+    "category": "Pollution",
+    "description": "Nuage de poussière causé par travaux de voirie",
+    "lat": 48.611172,
+    "lng": 2.466799,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "medium"
+  },
+  {
+    "id": "S-037",
+    "category": "Circulation",
+    "description": "Déviation mal signalée près du pont des Arts",
+    "lat": 48.617068,
+    "lng": 2.46461,
+    "status": "en_cours",
+    "date": "2026-03-30",
+    "severity": "medium"
+  },
+  {
+    "id": "S-038",
+    "category": "Sécurité",
+    "description": "Sentiment d'insécurité le soir le long du passage piéton",
+    "lat": 48.607077,
+    "lng": 2.469739,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "high"
+  },
+  {
+    "id": "S-039",
+    "category": "Eau Potable",
+    "description": "Paysage de canalisations apparentes dans la rue Saint-Michel",
+    "lat": 48.603935,
+    "lng": 2.46971,
+    "status": "en_cours",
+    "date": "2026-03-30",
+    "severity": "high"
+  },
+  {
+    "id": "S-040",
+    "category": "Espaces Verts",
+    "description": "Pelouse piétinée et déchets autour du jardin botanique",
+    "lat": 48.601925,
+    "lng": 2.459958,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "low"
+  },
+  {
+    "id": "S-041",
+    "category": "Stationnement",
+    "description": "Fourrière non respectée, voitures bloquent passage pompiers",
+    "lat": 48.621682,
+    "lng": 2.465719,
+    "status": "en_cours",
+    "date": "2026-03-29",
+    "severity": "high"
+  },
+  {
+    "id": "S-042",
+    "category": "Voirie",
+    "description": "Plancher de pont glissant après pluie rue des Carmes",
+    "lat": 48.609383,
+    "lng": 2.447998,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "medium"
+  },
+  {
+    "id": "S-043",
+    "category": "Propreté",
+    "description": "Odeurs de poubelles non ramassées secteur du marché",
+    "lat": 48.585959,
+    "lng": 2.474004,
+    "status": "en_cours",
+    "date": "2026-03-30",
+    "severity": "medium"
+  },
+  {
+    "id": "S-044",
+    "category": "Circulation",
+    "description": "Sortie de parking mal alignée, accident proche du collège",
+    "lat": 48.611391,
+    "lng": 2.454225,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "high"
+  },
+  {
+    "id": "S-045",
+    "category": "Pollution",
+    "description": "Fuite d'huile sur la chaussée après livraison poids lourd",
+    "lat": 48.608671,
+    "lng": 2.483019,
+    "status": "nouveau",
+    "date": "2026-03-31",
+    "severity": "medium"
+  },
+  {
+    "id": "S-046",
+    "category": "Voirie",
+    "description": "Cavité de chaussée importante rue du Faubourg Saint-Antoine",
+    "lat": 48.624639,
+    "lng": 2.470665,
+    "status": "nouveau",
+    "date": "2026-04-01",
+    "severity": "high"
+  },
+  {
+    "id": "S-047",
+    "category": "Propreté",
+    "description": "Déchets encombrants déposés le long du quai de la Célèbre",
+    "lat": 48.585924,
+    "lng": 2.482094,
+    "status": "en_cours",
+    "date": "2026-04-01",
+    "severity": "medium"
+  },
+  {
+    "id": "S-048",
+    "category": "Éclairage",
+    "description": "Éclairage public interrompu sur l'avenue du 8 Mai 1945",
+    "lat": 48.62192,
+    "lng": 2.473542,
+    "status": "nouveau",
+    "date": "2026-04-01",
+    "severity": "high"
+  },
+  {
+    "id": "S-049",
+    "category": "Nuisances",
+    "description": "Bruits de chantier non autorisés après 22h rue du Parc",
+    "lat": 48.580533,
+    "lng": 2.476558,
+    "status": "en_cours",
+    "date": "2026-04-01",
+    "severity": "high"
+  },
+  {
+    "id": "S-050",
+    "category": "Stationnement",
+    "description": "Voitures garées sur trottoir avenue de la Libération",
+    "lat": 48.583932,
+    "lng": 2.47192,
+    "status": "nouveau",
+    "date": "2026-04-01",
+    "severity": "medium"
+  },
+  {
+    "id": "S-051",
+    "category": "Espaces Verts",
+    "description": "Aires de jeux dégradées sur le parc du Moulin Galant",
+    "lat": 48.620029,
+    "lng": 2.463814,
+    "status": "nouveau",
+    "date": "2026-04-01",
+    "severity": "medium"
+  },
+  {
+    "id": "S-052",
+    "category": "Pollution",
+    "description": "Poussière de travaux sur l'avenue de la République",
+    "lat": 48.583818,
+    "lng": 2.47208,
+    "status": "nouveau",
+    "date": "2026-04-01",
+    "severity": "medium"
+  },
+  {
+    "id": "S-053",
+    "category": "Circulation",
+    "description": "Croisement dangereux sans feux tricolores boulevard Saint-Louis",
+    "lat": 48.600124,
+    "lng": 2.477872,
+    "status": "en_cours",
+    "date": "2026-04-01",
+    "severity": "high"
+  },
+  {
+    "id": "S-054",
+    "category": "Sécurité",
+    "description": "Barrières endommagées sur le passage piéton du centre-ville",
+    "lat": 48.599782,
+    "lng": 2.486924,
+    "status": "nouveau",
+    "date": "2026-04-01",
+    "severity": "medium"
+  },
+  {
+    "id": "S-055",
+    "category": "Eau Potable",
+    "description": "Pression d'eau très faible dans le quartier du Marais",
+    "lat": 48.601859,
+    "lng": 2.483067,
+    "status": "en_cours",
+    "date": "2026-04-01",
+    "severity": "high"
+  },
+  {
+    "id": "S-056",
+    "category": "Voirie",
+    "description": "Signalisation effacée sur la rue des Écoles",
+    "lat": 48.617517,
+    "lng": 2.480926,
+    "status": "nouveau",
+    "date": "2026-04-01",
+    "severity": "medium"
+  },
+  {
+    "id": "S-057",
+    "category": "Propreté",
+    "description": "Graffitis et saleté autour du stade municipal",
+    "lat": 48.618836,
+    "lng": 2.480036,
+    "status": "en_cours",
+    "date": "2026-04-01",
+    "severity": "low"
+  },
+  {
+    "id": "S-058",
+    "category": "Éclairage",
+    "description": "Lampadaire cassé sur le boulevard du Maréchal Foch",
+    "lat": 48.604007,
+    "lng": 2.459243,
+    "status": "nouveau",
+    "date": "2026-04-01",
+    "severity": "high"
+  },
+  {
+    "id": "S-059",
+    "category": "Nuisances",
+    "description": "Musique forte et déchets dans le parc des Prés",
+    "lat": 48.617706,
+    "lng": 2.481266,
+    "status": "nouveau",
+    "date": "2026-04-01",
+    "severity": "medium"
+  },
+  {
+    "id": "S-060",
+    "category": "Stationnement",
+    "description": "Entrée de lotissement bloquée par des véhicules mal garés",
+    "lat": 48.584091,
+    "lng": 2.48174,
+    "status": "en_cours",
+    "date": "2026-04-01",
+    "severity": "high"
+  },
+  {
+    "id": "S-061",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Ormes.",
+    "lat": 48.615034,
+    "lng": 2.44901,
+    "status": "nouveau",
+    "date": "2026-04-09",
+    "severity": "high"
+  },
+  {
+    "id": "S-062",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Tilleuls.",
+    "lat": 48.581884,
+    "lng": 2.480883,
+    "status": "nouveau",
+    "date": "2026-04-01",
+    "severity": "medium"
+  },
+  {
+    "id": "S-063",
+    "category": "Sécurité",
+    "description": "Passage piéton dangereux Rue des Tilleuls, manque de signalisation.",
+    "lat": 48.617722,
+    "lng": 2.454897,
+    "status": "nouveau",
+    "date": "2026-04-03",
+    "severity": "high"
+  },
+  {
+    "id": "S-064",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Ormes.",
+    "lat": 48.591569,
+    "lng": 2.472323,
+    "status": "en_cours",
+    "date": "2026-04-02",
+    "severity": "low"
+  },
+  {
+    "id": "S-065",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Écoles.",
+    "lat": 48.586729,
+    "lng": 2.477167,
+    "status": "nouveau",
+    "date": "2026-04-08",
+    "severity": "high"
+  },
+  {
+    "id": "S-066",
+    "category": "Sécurité",
+    "description": "Passage piéton dangereux Rue des Tilleuls, manque de signalisation.",
+    "lat": 48.597858,
+    "lng": 2.470361,
+    "status": "resolu",
+    "date": "2026-04-06",
+    "severity": "medium"
+  },
+  {
+    "id": "S-067",
+    "category": "Eau Potable",
+    "description": "Pression d'eau faible Rue des Près, eau non potable.",
+    "lat": 48.601526,
+    "lng": 2.458065,
+    "status": "en_cours",
+    "date": "2026-04-04",
+    "severity": "low"
+  },
+  {
+    "id": "S-068",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Ormes.",
+    "lat": 48.608967,
+    "lng": 2.450806,
+    "status": "nouveau",
+    "date": "2026-04-06",
+    "severity": "medium"
+  },
+  {
+    "id": "S-069",
+    "category": "Nuisances",
+    "description": "Niveau sonore élevé Avenue des Ormes.",
+    "lat": 48.609566,
+    "lng": 2.466591,
+    "status": "nouveau",
+    "date": "2026-04-03",
+    "severity": "medium"
+  },
+  {
+    "id": "S-070",
+    "category": "Sécurité",
+    "description": "Passage piéton dangereux Rue des Moulins, manque de signalisation.",
+    "lat": 48.606819,
+    "lng": 2.477912,
+    "status": "resolu",
+    "date": "2026-04-09",
+    "severity": "high"
+  },
+  {
+    "id": "S-071",
+    "category": "Nuisances",
+    "description": "Niveau sonore élevé Avenue des Écoles.",
+    "lat": 48.587659,
+    "lng": 2.473589,
+    "status": "nouveau",
+    "date": "2026-04-01",
+    "severity": "high"
+  },
+  {
+    "id": "S-072",
+    "category": "Espaces Verts",
+    "description": "Pelouse piétinée Square des Ormes.",
+    "lat": 48.616803,
+    "lng": 2.454099,
+    "status": "resolu",
+    "date": "2026-04-06",
+    "severity": "high"
+  },
+  {
+    "id": "S-073",
+    "category": "Nuisances",
+    "description": "Niveau sonore élevé Avenue des Chênes.",
+    "lat": 48.585977,
+    "lng": 2.476678,
+    "status": "en_cours",
+    "date": "2026-04-05",
+    "severity": "low"
+  },
+  {
+    "id": "S-074",
+    "category": "Éclairage",
+    "description": "Lampadaire éteint Boulevard des Ormes depuis plusieurs nuits.",
+    "lat": 48.607196,
+    "lng": 2.488951,
+    "status": "resolu",
+    "date": "2026-04-06",
+    "severity": "medium"
+  },
+  {
+    "id": "S-075",
+    "category": "Nuisances",
+    "description": "Niveau sonore élevé Avenue des Chênes.",
+    "lat": 48.603717,
+    "lng": 2.486861,
+    "status": "nouveau",
+    "date": "2026-04-03",
+    "severity": "low"
+  },
+  {
+    "id": "S-076",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Près.",
+    "lat": 48.599914,
+    "lng": 2.453378,
+    "status": "en_cours",
+    "date": "2026-04-05",
+    "severity": "medium"
+  },
+  {
+    "id": "S-077",
+    "category": "Sécurité",
+    "description": "Passage piéton dangereux Rue des Près, manque de signalisation.",
+    "lat": 48.601717,
+    "lng": 2.460551,
+    "status": "en_cours",
+    "date": "2026-04-06",
+    "severity": "high"
+  },
+  {
+    "id": "S-078",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Tilleuls.",
+    "lat": 48.595245,
+    "lng": 2.473059,
+    "status": "resolu",
+    "date": "2026-04-05",
+    "severity": "high"
+  },
+  {
+    "id": "S-079",
+    "category": "Sécurité",
+    "description": "Passage piéton dangereux Rue des Près, manque de signalisation.",
+    "lat": 48.619795,
+    "lng": 2.46296,
+    "status": "resolu",
+    "date": "2026-04-04",
+    "severity": "medium"
+  },
+  {
+    "id": "S-080",
+    "category": "Éclairage",
+    "description": "Lampadaire éteint Boulevard des Fontaines depuis plusieurs nuits.",
+    "lat": 48.587939,
+    "lng": 2.471848,
+    "status": "resolu",
+    "date": "2026-04-06",
+    "severity": "low"
+  },
+  {
+    "id": "S-081",
+    "category": "Circulation",
+    "description": "Bouchon récurrent Rond-point des Près, ralentissements fréquents.",
+    "lat": 48.61135,
+    "lng": 2.482167,
+    "status": "en_cours",
+    "date": "2026-04-01",
+    "severity": "low"
+  },
+  {
+    "id": "S-082",
+    "category": "Nuisances",
+    "description": "Niveau sonore élevé Avenue des Près.",
+    "lat": 48.581717,
+    "lng": 2.474065,
+    "status": "nouveau",
+    "date": "2026-04-09",
+    "severity": "high"
+  },
+  {
+    "id": "S-083",
+    "category": "Éclairage",
+    "description": "Lampadaire éteint Boulevard des Chênes depuis plusieurs nuits.",
+    "lat": 48.604519,
+    "lng": 2.459692,
+    "status": "resolu",
+    "date": "2026-04-07",
+    "severity": "high"
+  },
+  {
+    "id": "S-084",
+    "category": "Nuisances",
+    "description": "Niveau sonore élevé Avenue des Moulins.",
+    "lat": 48.608267,
+    "lng": 2.447452,
+    "status": "resolu",
+    "date": "2026-04-06",
+    "severity": "high"
+  },
+  {
+    "id": "S-085",
+    "category": "Circulation",
+    "description": "Bouchon récurrent Rond-point des Chênes, ralentissements fréquents.",
+    "lat": 48.612415,
+    "lng": 2.478414,
+    "status": "en_cours",
+    "date": "2026-04-09",
+    "severity": "low"
+  },
+  {
+    "id": "S-086",
+    "category": "Nuisances",
+    "description": "Niveau sonore élevé Avenue des Moulins.",
+    "lat": 48.616821,
+    "lng": 2.450499,
+    "status": "nouveau",
+    "date": "2026-04-02",
+    "severity": "low"
+  },
+  {
+    "id": "S-087",
+    "category": "Voirie",
+    "description": "Fissure dans la chaussée Rue des Près.",
+    "lat": 48.61418,
+    "lng": 2.46203,
+    "status": "en_cours",
+    "date": "2026-04-09",
+    "severity": "low"
+  },
+  {
+    "id": "S-088",
+    "category": "Éclairage",
+    "description": "Lampadaire éteint Boulevard des Chênes depuis plusieurs nuits.",
+    "lat": 48.622545,
+    "lng": 2.469762,
+    "status": "en_cours",
+    "date": "2026-04-02",
+    "severity": "low"
+  },
+  {
+    "id": "S-089",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Tilleuls.",
+    "lat": 48.603556,
+    "lng": 2.486228,
+    "status": "resolu",
+    "date": "2026-04-02",
+    "severity": "low"
+  },
+  {
+    "id": "S-090",
+    "category": "Voirie",
+    "description": "Fissure dans la chaussée Rue des Écoles.",
+    "lat": 48.597484,
+    "lng": 2.476651,
+    "status": "nouveau",
+    "date": "2026-04-09",
+    "severity": "low"
+  },
+  {
+    "id": "S-091",
+    "category": "Circulation",
+    "description": "Bouchon récurrent Rond-point des Tilleuls, ralentissements fréquents.",
+    "lat": 48.59991,
+    "lng": 2.482843,
+    "status": "nouveau",
+    "date": "2026-04-09",
+    "severity": "medium"
+  },
+  {
+    "id": "S-092",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Acacias.",
+    "lat": 48.610929,
+    "lng": 2.48655,
+    "status": "nouveau",
+    "date": "2026-04-07",
+    "severity": "low"
+  },
+  {
+    "id": "S-093",
+    "category": "Circulation",
+    "description": "Bouchon récurrent Rond-point des Moulins, ralentissements fréquents.",
+    "lat": 48.598414,
+    "lng": 2.47924,
+    "status": "nouveau",
+    "date": "2026-04-01",
+    "severity": "medium"
+  },
+  {
+    "id": "S-094",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Chênes.",
+    "lat": 48.584529,
+    "lng": 2.471503,
+    "status": "resolu",
+    "date": "2026-04-09",
+    "severity": "high"
+  },
+  {
+    "id": "S-095",
+    "category": "Circulation",
+    "description": "Bouchon récurrent Rond-point des Moulins, ralentissements fréquents.",
+    "lat": 48.608132,
+    "lng": 2.449501,
+    "status": "resolu",
+    "date": "2026-04-09",
+    "severity": "high"
+  },
+  {
+    "id": "S-096",
+    "category": "Voirie",
+    "description": "Fissure dans la chaussée Rue des Écoles.",
+    "lat": 48.572689,
+    "lng": 2.475936,
+    "status": "resolu",
+    "date": "2026-04-09",
+    "severity": "high"
+  },
+  {
+    "id": "S-097",
+    "category": "Éclairage",
+    "description": "Lampadaire éteint Boulevard des Près depuis plusieurs nuits.",
+    "lat": 48.599614,
+    "lng": 2.459311,
+    "status": "nouveau",
+    "date": "2026-04-04",
+    "severity": "high"
+  },
+  {
+    "id": "S-098",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Moulins.",
+    "lat": 48.620001,
+    "lng": 2.460009,
+    "status": "nouveau",
+    "date": "2026-04-09",
+    "severity": "medium"
+  },
+  {
+    "id": "S-099",
+    "category": "Espaces Verts",
+    "description": "Pelouse piétinée Square des Moulins.",
+    "lat": 48.60822,
+    "lng": 2.469129,
+    "status": "en_cours",
+    "date": "2026-04-03",
+    "severity": "medium"
+  },
+  {
+    "id": "S-100",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Écoles sur trottoir.",
+    "lat": 48.612164,
+    "lng": 2.484298,
+    "status": "nouveau",
+    "date": "2026-04-02",
+    "severity": "medium"
+  },
+  {
+    "id": "S-101",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Moulins.",
+    "lat": 48.611482,
+    "lng": 2.456204,
+    "status": "en_cours",
+    "date": "2026-04-04",
+    "severity": "low"
+  },
+  {
+    "id": "S-102",
+    "category": "Espaces Verts",
+    "description": "Pelouse piétinée Square des Fontaines.",
+    "lat": 48.611146,
+    "lng": 2.459947,
+    "status": "en_cours",
+    "date": "2026-04-09",
+    "severity": "medium"
+  },
+  {
+    "id": "S-103",
+    "category": "Voirie",
+    "description": "Fissure dans la chaussée Rue des Ormes.",
+    "lat": 48.603027,
+    "lng": 2.467018,
+    "status": "nouveau",
+    "date": "2026-04-02",
+    "severity": "medium"
+  },
+  {
+    "id": "S-104",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Fontaines.",
+    "lat": 48.607298,
+    "lng": 2.455335,
+    "status": "resolu",
+    "date": "2026-04-04",
+    "severity": "medium"
+  },
+  {
+    "id": "S-105",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Chênes sur trottoir.",
+    "lat": 48.60084,
+    "lng": 2.458556,
+    "status": "nouveau",
+    "date": "2026-04-07",
+    "severity": "low"
+  },
+  {
+    "id": "S-106",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Acacias sur trottoir.",
+    "lat": 48.590412,
+    "lng": 2.478985,
+    "status": "en_cours",
+    "date": "2026-04-08",
+    "severity": "low"
+  },
+  {
+    "id": "S-107",
+    "category": "Sécurité",
+    "description": "Passage piéton dangereux Rue des Tilleuls, manque de signalisation.",
+    "lat": 48.615897,
+    "lng": 2.478472,
+    "status": "resolu",
+    "date": "2026-04-09",
+    "severity": "low"
+  },
+  {
+    "id": "S-108",
+    "category": "Voirie",
+    "description": "Fissure dans la chaussée Rue des Fontaines.",
+    "lat": 48.613044,
+    "lng": 2.472805,
+    "status": "en_cours",
+    "date": "2026-04-01",
+    "severity": "high"
+  },
+  {
+    "id": "S-109",
+    "category": "Espaces Verts",
+    "description": "Pelouse piétinée Square des Moulins.",
+    "lat": 48.611525,
+    "lng": 2.472894,
+    "status": "resolu",
+    "date": "2026-04-07",
+    "severity": "high"
+  },
+  {
+    "id": "S-110",
+    "category": "Eau Potable",
+    "description": "Pression d'eau faible Rue des Fontaines, eau non potable.",
+    "lat": 48.612237,
+    "lng": 2.475549,
+    "status": "nouveau",
+    "date": "2026-04-03",
+    "severity": "high"
+  },
+  {
+    "id": "S-111",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Fontaines.",
+    "lat": 48.57552,
+    "lng": 2.478245,
+    "status": "en_cours",
+    "date": "2026-04-04",
+    "severity": "high"
+  },
+  {
+    "id": "S-112",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Près sur trottoir.",
+    "lat": 48.607197,
+    "lng": 2.45399,
+    "status": "en_cours",
+    "date": "2026-04-04",
+    "severity": "low"
+  },
+  {
+    "id": "S-113",
+    "category": "Circulation",
+    "description": "Bouchon récurrent Rond-point des Ormes, ralentissements fréquents.",
+    "lat": 48.573351,
+    "lng": 2.476414,
+    "status": "nouveau",
+    "date": "2026-04-04",
+    "severity": "low"
+  },
+  {
+    "id": "S-114",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Ormes.",
+    "lat": 48.604377,
+    "lng": 2.475056,
+    "status": "en_cours",
+    "date": "2026-04-09",
+    "severity": "medium"
+  },
+  {
+    "id": "S-115",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Écoles.",
+    "lat": 48.612552,
+    "lng": 2.442304,
+    "status": "en_cours",
+    "date": "2026-04-05",
+    "severity": "low"
+  },
+  {
+    "id": "S-116",
+    "category": "Voirie",
+    "description": "Fissure dans la chaussée Rue des Tilleuls.",
+    "lat": 48.602867,
+    "lng": 2.48394,
+    "status": "en_cours",
+    "date": "2026-04-09",
+    "severity": "medium"
+  },
+  {
+    "id": "S-117",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Moulins.",
+    "lat": 48.588616,
+    "lng": 2.480176,
+    "status": "nouveau",
+    "date": "2026-04-09",
+    "severity": "medium"
+  },
+  {
+    "id": "S-118",
+    "category": "Nuisances",
+    "description": "Niveau sonore élevé Avenue des Tilleuls.",
+    "lat": 48.615357,
+    "lng": 2.4839,
+    "status": "en_cours",
+    "date": "2026-04-06",
+    "severity": "medium"
+  },
+  {
+    "id": "S-119",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Ormes.",
+    "lat": 48.615716,
+    "lng": 2.471995,
+    "status": "en_cours",
+    "date": "2026-04-05",
+    "severity": "medium"
+  },
+  {
+    "id": "S-120",
+    "category": "Sécurité",
+    "description": "Passage piéton dangereux Rue des Moulins, manque de signalisation.",
+    "lat": 48.593585,
+    "lng": 2.475985,
+    "status": "resolu",
+    "date": "2026-04-03",
+    "severity": "high"
+  },
+  {
+    "id": "S-121",
+    "category": "Eau Potable",
+    "description": "Pression d'eau faible Rue des Ormes, eau non potable.",
+    "lat": 48.614562,
+    "lng": 2.45166,
+    "status": "en_cours",
+    "date": "2026-04-04",
+    "severity": "medium"
+  },
+  {
+    "id": "S-122",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Écoles.",
+    "lat": 48.596287,
+    "lng": 2.466575,
+    "status": "nouveau",
+    "date": "2026-04-08",
+    "severity": "medium"
+  },
+  {
+    "id": "S-123",
+    "category": "Éclairage",
+    "description": "Lampadaire éteint Boulevard des Près depuis plusieurs nuits.",
+    "lat": 48.610218,
+    "lng": 2.460867,
+    "status": "resolu",
+    "date": "2026-04-02",
+    "severity": "medium"
+  },
+  {
+    "id": "S-124",
+    "category": "Nuisances",
+    "description": "Niveau sonore élevé Avenue des Ormes.",
+    "lat": 48.617011,
+    "lng": 2.451567,
+    "status": "nouveau",
+    "date": "2026-04-04",
+    "severity": "low"
+  },
+  {
+    "id": "S-125",
+    "category": "Circulation",
+    "description": "Bouchon récurrent Rond-point des Près, ralentissements fréquents.",
+    "lat": 48.603425,
+    "lng": 2.462488,
+    "status": "resolu",
+    "date": "2026-04-07",
+    "severity": "low"
+  },
+  {
+    "id": "S-126",
+    "category": "Circulation",
+    "description": "Bouchon récurrent Rond-point des Moulins, ralentissements fréquents.",
+    "lat": 48.613978,
+    "lng": 2.448436,
+    "status": "nouveau",
+    "date": "2026-04-07",
+    "severity": "high"
+  },
+  {
+    "id": "S-127",
+    "category": "Nuisances",
+    "description": "Niveau sonore élevé Avenue des Chênes.",
+    "lat": 48.618621,
+    "lng": 2.455569,
+    "status": "nouveau",
+    "date": "2026-04-03",
+    "severity": "medium"
+  },
+  {
+    "id": "S-128",
+    "category": "Circulation",
+    "description": "Bouchon récurrent Rond-point des Écoles, ralentissements fréquents.",
+    "lat": 48.584623,
+    "lng": 2.475644,
+    "status": "resolu",
+    "date": "2026-04-09",
+    "severity": "high"
+  },
+  {
+    "id": "S-129",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Chênes.",
+    "lat": 48.611746,
+    "lng": 2.463816,
+    "status": "en_cours",
+    "date": "2026-04-05",
+    "severity": "medium"
+  },
+  {
+    "id": "S-130",
+    "category": "Nuisances",
+    "description": "Niveau sonore élevé Avenue des Ormes.",
+    "lat": 48.605427,
+    "lng": 2.475056,
+    "status": "resolu",
+    "date": "2026-04-05",
+    "severity": "low"
+  },
+  {
+    "id": "S-131",
+    "category": "Circulation",
+    "description": "Bouchon récurrent Rond-point des Ormes, ralentissements fréquents.",
+    "lat": 48.613703,
+    "lng": 2.463941,
+    "status": "resolu",
+    "date": "2026-04-03",
+    "severity": "low"
+  },
+  {
+    "id": "S-132",
+    "category": "Éclairage",
+    "description": "Lampadaire éteint Boulevard des Tilleuls depuis plusieurs nuits.",
+    "lat": 48.586308,
+    "lng": 2.475122,
+    "status": "nouveau",
+    "date": "2026-04-07",
+    "severity": "medium"
+  },
+  {
+    "id": "S-133",
+    "category": "Espaces Verts",
+    "description": "Pelouse piétinée Square des Chênes.",
+    "lat": 48.595711,
+    "lng": 2.468989,
+    "status": "en_cours",
+    "date": "2026-04-01",
+    "severity": "medium"
+  },
+  {
+    "id": "S-134",
+    "category": "Eau Potable",
+    "description": "Pression d'eau faible Rue des Chênes, eau non potable.",
+    "lat": 48.593023,
+    "lng": 2.466172,
+    "status": "en_cours",
+    "date": "2026-04-07",
+    "severity": "high"
+  },
+  {
+    "id": "S-135",
+    "category": "Sécurité",
+    "description": "Passage piéton dangereux Rue des Moulins, manque de signalisation.",
+    "lat": 48.587692,
+    "lng": 2.478134,
+    "status": "en_cours",
+    "date": "2026-04-07",
+    "severity": "low"
+  },
+  {
+    "id": "S-136",
+    "category": "Espaces Verts",
+    "description": "Pelouse piétinée Square des Tilleuls.",
+    "lat": 48.584322,
+    "lng": 2.475737,
+    "status": "nouveau",
+    "date": "2026-04-09",
+    "severity": "medium"
+  },
+  {
+    "id": "S-137",
+    "category": "Voirie",
+    "description": "Fissure dans la chaussée Rue des Acacias.",
+    "lat": 48.611972,
+    "lng": 2.466447,
+    "status": "en_cours",
+    "date": "2026-04-01",
+    "severity": "low"
+  },
+  {
+    "id": "S-138",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Écoles sur trottoir.",
+    "lat": 48.609856,
+    "lng": 2.463573,
+    "status": "en_cours",
+    "date": "2026-04-07",
+    "severity": "medium"
+  },
+  {
+    "id": "S-139",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Chênes sur trottoir.",
+    "lat": 48.596702,
+    "lng": 2.484951,
+    "status": "en_cours",
+    "date": "2026-04-02",
+    "severity": "low"
+  },
+  {
+    "id": "S-140",
+    "category": "Voirie",
+    "description": "Fissure dans la chaussée Rue des Moulins.",
+    "lat": 48.601384,
+    "lng": 2.485188,
+    "status": "nouveau",
+    "date": "2026-04-03",
+    "severity": "low"
+  },
+  {
+    "id": "S-141",
+    "category": "Circulation",
+    "description": "Bouchon récurrent Rond-point des Près, ralentissements fréquents.",
+    "lat": 48.591627,
+    "lng": 2.482372,
+    "status": "resolu",
+    "date": "2026-04-06",
+    "severity": "medium"
+  },
+  {
+    "id": "S-142",
+    "category": "Éclairage",
+    "description": "Lampadaire éteint Boulevard des Près depuis plusieurs nuits.",
+    "lat": 48.603199,
+    "lng": 2.479164,
+    "status": "en_cours",
+    "date": "2026-04-01",
+    "severity": "low"
+  },
+  {
+    "id": "S-143",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Tilleuls sur trottoir.",
+    "lat": 48.581776,
+    "lng": 2.480627,
+    "status": "nouveau",
+    "date": "2026-04-04",
+    "severity": "medium"
+  },
+  {
+    "id": "S-144",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Ormes.",
+    "lat": 48.59443,
+    "lng": 2.465708,
+    "status": "nouveau",
+    "date": "2026-04-01",
+    "severity": "high"
+  },
+  {
+    "id": "S-145",
+    "category": "Espaces Verts",
+    "description": "Pelouse piétinée Square des Tilleuls.",
+    "lat": 48.617487,
+    "lng": 2.461265,
+    "status": "resolu",
+    "date": "2026-04-01",
+    "severity": "medium"
+  },
+  {
+    "id": "S-146",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Près.",
+    "lat": 48.603386,
+    "lng": 2.471185,
+    "status": "en_cours",
+    "date": "2026-04-03",
+    "severity": "high"
+  },
+  {
+    "id": "S-147",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Ormes.",
+    "lat": 48.577914,
+    "lng": 2.473377,
+    "status": "en_cours",
+    "date": "2026-04-07",
+    "severity": "medium"
+  },
+  {
+    "id": "S-148",
+    "category": "Eau Potable",
+    "description": "Pression d'eau faible Rue des Écoles, eau non potable.",
+    "lat": 48.585467,
+    "lng": 2.469671,
+    "status": "nouveau",
+    "date": "2026-04-08",
+    "severity": "medium"
+  },
+  {
+    "id": "S-149",
+    "category": "Nuisances",
+    "description": "Niveau sonore élevé Avenue des Tilleuls.",
+    "lat": 48.608864,
+    "lng": 2.449513,
+    "status": "en_cours",
+    "date": "2026-04-08",
+    "severity": "low"
+  },
+  {
+    "id": "S-150",
+    "category": "Nuisances",
+    "description": "Niveau sonore élevé Avenue des Ormes.",
+    "lat": 48.594628,
+    "lng": 2.475745,
+    "status": "resolu",
+    "date": "2026-04-09",
+    "severity": "medium"
+  },
+  {
+    "id": "S-151",
+    "category": "Voirie",
+    "description": "Fissure dans la chaussée Rue des Moulins.",
+    "lat": 48.621075,
+    "lng": 2.474877,
+    "status": "en_cours",
+    "date": "2026-04-04",
+    "severity": "medium"
+  },
+  {
+    "id": "S-152",
+    "category": "Circulation",
+    "description": "Bouchon récurrent Rond-point des Chênes, ralentissements fréquents.",
+    "lat": 48.604254,
+    "lng": 2.480465,
+    "status": "en_cours",
+    "date": "2026-04-07",
+    "severity": "low"
+  },
+  {
+    "id": "S-153",
+    "category": "Nuisances",
+    "description": "Niveau sonore élevé Avenue des Écoles.",
+    "lat": 48.621624,
+    "lng": 2.473419,
+    "status": "en_cours",
+    "date": "2026-04-09",
+    "severity": "high"
+  },
+  {
+    "id": "S-154",
+    "category": "Espaces Verts",
+    "description": "Pelouse piétinée Square des Chênes.",
+    "lat": 48.599724,
+    "lng": 2.460287,
+    "status": "nouveau",
+    "date": "2026-04-04",
+    "severity": "high"
+  },
+  {
+    "id": "S-155",
+    "category": "Espaces Verts",
+    "description": "Pelouse piétinée Square des Fontaines.",
+    "lat": 48.620202,
+    "lng": 2.472665,
+    "status": "en_cours",
+    "date": "2026-04-09",
+    "severity": "high"
+  },
+  {
+    "id": "S-156",
+    "category": "Eau Potable",
+    "description": "Pression d'eau faible Rue des Près, eau non potable.",
+    "lat": 48.601111,
+    "lng": 2.478302,
+    "status": "en_cours",
+    "date": "2026-04-05",
+    "severity": "low"
+  },
+  {
+    "id": "S-157",
+    "category": "Voirie",
+    "description": "Fissure dans la chaussée Rue des Fontaines.",
+    "lat": 48.608457,
+    "lng": 2.474949,
+    "status": "resolu",
+    "date": "2026-04-03",
+    "severity": "medium"
+  },
+  {
+    "id": "S-158",
+    "category": "Circulation",
+    "description": "Bouchon récurrent Rond-point des Acacias, ralentissements fréquents.",
+    "lat": 48.601448,
+    "lng": 2.483143,
+    "status": "en_cours",
+    "date": "2026-04-03",
+    "severity": "medium"
+  },
+  {
+    "id": "S-159",
+    "category": "Voirie",
+    "description": "Fissure dans la chaussée Rue des Chênes.",
+    "lat": 48.584243,
+    "lng": 2.474036,
+    "status": "en_cours",
+    "date": "2026-04-01",
+    "severity": "low"
+  },
+  {
+    "id": "S-160",
+    "category": "Éclairage",
+    "description": "Lampadaire éteint Boulevard des Ormes depuis plusieurs nuits.",
+    "lat": 48.611639,
+    "lng": 2.438873,
+    "status": "resolu",
+    "date": "2026-04-07",
+    "severity": "high"
+  },
+  {
+    "id": "S-161",
+    "category": "Eau Potable",
+    "description": "Pression d'eau faible Rue des Moulins, eau non potable.",
+    "lat": 48.605743,
+    "lng": 2.462811,
+    "status": "en_cours",
+    "date": "2026-04-07",
+    "severity": "medium"
+  },
+  {
+    "id": "S-162",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Acacias sur trottoir.",
+    "lat": 48.604802,
+    "lng": 2.469199,
+    "status": "nouveau",
+    "date": "2026-04-04",
+    "severity": "high"
+  },
+  {
+    "id": "S-163",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Près sur trottoir.",
+    "lat": 48.61735,
+    "lng": 2.473917,
+    "status": "nouveau",
+    "date": "2026-04-01",
+    "severity": "low"
+  },
+  {
+    "id": "S-164",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Chênes.",
+    "lat": 48.608116,
+    "lng": 2.454983,
+    "status": "resolu",
+    "date": "2026-04-08",
+    "severity": "medium"
+  },
+  {
+    "id": "S-165",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Moulins.",
+    "lat": 48.600035,
+    "lng": 2.481897,
+    "status": "resolu",
+    "date": "2026-04-04",
+    "severity": "medium"
+  },
+  {
+    "id": "S-166",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Moulins.",
+    "lat": 48.598037,
+    "lng": 2.459121,
+    "status": "nouveau",
+    "date": "2026-04-01",
+    "severity": "low"
+  },
+  {
+    "id": "S-167",
+    "category": "Éclairage",
+    "description": "Lampadaire éteint Boulevard des Ormes depuis plusieurs nuits.",
+    "lat": 48.592333,
+    "lng": 2.466821,
+    "status": "en_cours",
+    "date": "2026-04-07",
+    "severity": "high"
+  },
+  {
+    "id": "S-168",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Chênes sur trottoir.",
+    "lat": 48.604274,
+    "lng": 2.478719,
+    "status": "en_cours",
+    "date": "2026-04-06",
+    "severity": "high"
+  },
+  {
+    "id": "S-169",
+    "category": "Eau Potable",
+    "description": "Pression d'eau faible Rue des Acacias, eau non potable.",
+    "lat": 48.580531,
+    "lng": 2.478916,
+    "status": "resolu",
+    "date": "2026-04-01",
+    "severity": "medium"
+  },
+  {
+    "id": "S-170",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Acacias sur trottoir.",
+    "lat": 48.621286,
+    "lng": 2.46719,
+    "status": "resolu",
+    "date": "2026-04-08",
+    "severity": "high"
+  },
+  {
+    "id": "S-171",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Tilleuls sur trottoir.",
+    "lat": 48.608374,
+    "lng": 2.461009,
+    "status": "nouveau",
+    "date": "2026-04-06",
+    "severity": "medium"
+  },
+  {
+    "id": "S-172",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Écoles.",
+    "lat": 48.597124,
+    "lng": 2.48293,
+    "status": "en_cours",
+    "date": "2026-04-08",
+    "severity": "medium"
+  },
+  {
+    "id": "S-173",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Tilleuls sur trottoir.",
+    "lat": 48.597715,
+    "lng": 2.476502,
+    "status": "en_cours",
+    "date": "2026-04-06",
+    "severity": "low"
+  },
+  {
+    "id": "S-174",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Près sur trottoir.",
+    "lat": 48.616055,
+    "lng": 2.451846,
+    "status": "resolu",
+    "date": "2026-04-01",
+    "severity": "high"
+  },
+  {
+    "id": "S-175",
+    "category": "Sécurité",
+    "description": "Passage piéton dangereux Rue des Tilleuls, manque de signalisation.",
+    "lat": 48.590663,
+    "lng": 2.467304,
+    "status": "resolu",
+    "date": "2026-04-08",
+    "severity": "high"
+  },
+  {
+    "id": "S-176",
+    "category": "Circulation",
+    "description": "Bouchon récurrent Rond-point des Moulins, ralentissements fréquents.",
+    "lat": 48.613538,
+    "lng": 2.452003,
+    "status": "en_cours",
+    "date": "2026-04-08",
+    "severity": "medium"
+  },
+  {
+    "id": "S-177",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Moulins.",
+    "lat": 48.621656,
+    "lng": 2.45972,
+    "status": "nouveau",
+    "date": "2026-04-07",
+    "severity": "medium"
+  },
+  {
+    "id": "S-178",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Près.",
+    "lat": 48.615257,
+    "lng": 2.464882,
+    "status": "nouveau",
+    "date": "2026-04-05",
+    "severity": "medium"
+  },
+  {
+    "id": "S-179",
+    "category": "Sécurité",
+    "description": "Passage piéton dangereux Rue des Ormes, manque de signalisation.",
+    "lat": 48.59966,
+    "lng": 2.46734,
+    "status": "en_cours",
+    "date": "2026-04-08",
+    "severity": "low"
+  },
+  {
+    "id": "S-180",
+    "category": "Sécurité",
+    "description": "Passage piéton dangereux Rue des Tilleuls, manque de signalisation.",
+    "lat": 48.608331,
+    "lng": 2.44713,
+    "status": "resolu",
+    "date": "2026-04-02",
+    "severity": "low"
+  },
+  {
+    "id": "S-181",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Écoles sur trottoir.",
+    "lat": 48.571531,
+    "lng": 2.479781,
+    "status": "nouveau",
+    "date": "2026-04-05",
+    "severity": "medium"
+  },
+  {
+    "id": "S-182",
+    "category": "Eau Potable",
+    "description": "Pression d'eau faible Rue des Chênes, eau non potable.",
+    "lat": 48.608766,
+    "lng": 2.478066,
+    "status": "en_cours",
+    "date": "2026-04-06",
+    "severity": "medium"
+  },
+  {
+    "id": "S-183",
+    "category": "Sécurité",
+    "description": "Passage piéton dangereux Rue des Tilleuls, manque de signalisation.",
+    "lat": 48.590804,
+    "lng": 2.481777,
+    "status": "nouveau",
+    "date": "2026-04-04",
+    "severity": "high"
+  },
+  {
+    "id": "S-184",
+    "category": "Eau Potable",
+    "description": "Pression d'eau faible Rue des Moulins, eau non potable.",
+    "lat": 48.615268,
+    "lng": 2.473558,
+    "status": "en_cours",
+    "date": "2026-04-08",
+    "severity": "high"
+  },
+  {
+    "id": "S-185",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Fontaines.",
+    "lat": 48.618023,
+    "lng": 2.469469,
+    "status": "resolu",
+    "date": "2026-04-06",
+    "severity": "medium"
+  },
+  {
+    "id": "S-186",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Près.",
+    "lat": 48.594791,
+    "lng": 2.465896,
+    "status": "resolu",
+    "date": "2026-04-07",
+    "severity": "low"
+  },
+  {
+    "id": "S-187",
+    "category": "Éclairage",
+    "description": "Lampadaire éteint Boulevard des Chênes depuis plusieurs nuits.",
+    "lat": 48.592149,
+    "lng": 2.476827,
+    "status": "resolu",
+    "date": "2026-04-07",
+    "severity": "high"
+  },
+  {
+    "id": "S-188",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Tilleuls.",
+    "lat": 48.608062,
+    "lng": 2.45547,
+    "status": "en_cours",
+    "date": "2026-04-09",
+    "severity": "high"
+  },
+  {
+    "id": "S-189",
+    "category": "Voirie",
+    "description": "Fissure dans la chaussée Rue des Près.",
+    "lat": 48.617014,
+    "lng": 2.472788,
+    "status": "en_cours",
+    "date": "2026-04-02",
+    "severity": "low"
+  },
+  {
+    "id": "S-190",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Près.",
+    "lat": 48.611815,
+    "lng": 2.47662,
+    "status": "nouveau",
+    "date": "2026-04-06",
+    "severity": "low"
+  },
+  {
+    "id": "S-191",
+    "category": "Voirie",
+    "description": "Fissure dans la chaussée Rue des Écoles.",
+    "lat": 48.593499,
+    "lng": 2.47818,
+    "status": "resolu",
+    "date": "2026-04-03",
+    "severity": "medium"
+  },
+  {
+    "id": "S-192",
+    "category": "Éclairage",
+    "description": "Lampadaire éteint Boulevard des Près depuis plusieurs nuits.",
+    "lat": 48.619922,
+    "lng": 2.475245,
+    "status": "resolu",
+    "date": "2026-04-08",
+    "severity": "low"
+  },
+  {
+    "id": "S-193",
+    "category": "Eau Potable",
+    "description": "Pression d'eau faible Rue des Moulins, eau non potable.",
+    "lat": 48.613883,
+    "lng": 2.439193,
+    "status": "en_cours",
+    "date": "2026-04-01",
+    "severity": "high"
+  },
+  {
+    "id": "S-194",
+    "category": "Circulation",
+    "description": "Bouchon récurrent Rond-point des Fontaines, ralentissements fréquents.",
+    "lat": 48.613679,
+    "lng": 2.46812,
+    "status": "resolu",
+    "date": "2026-04-07",
+    "severity": "medium"
+  },
+  {
+    "id": "S-195",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Ormes sur trottoir.",
+    "lat": 48.603953,
+    "lng": 2.485083,
+    "status": "en_cours",
+    "date": "2026-04-04",
+    "severity": "low"
+  },
+  {
+    "id": "S-196",
+    "category": "Pollution",
+    "description": "Poussière et débris Quai des Écoles.",
+    "lat": 48.607212,
+    "lng": 2.486773,
+    "status": "en_cours",
+    "date": "2026-04-07",
+    "severity": "low"
+  },
+  {
+    "id": "S-197",
+    "category": "Stationnement",
+    "description": "Voiture mal garée Place des Acacias sur trottoir.",
+    "lat": 48.602144,
+    "lng": 2.45586,
+    "status": "en_cours",
+    "date": "2026-04-04",
+    "severity": "high"
+  },
+  {
+    "id": "S-198",
+    "category": "Eau Potable",
+    "description": "Pression d'eau faible Rue des Moulins, eau non potable.",
+    "lat": 48.592955,
+    "lng": 2.472181,
+    "status": "resolu",
+    "date": "2026-04-03",
+    "severity": "high"
+  },
+  {
+    "id": "S-199",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Acacias.",
+    "lat": 48.61665,
+    "lng": 2.450549,
+    "status": "resolu",
+    "date": "2026-04-03",
+    "severity": "medium"
+  },
+  {
+    "id": "S-200",
+    "category": "Propreté",
+    "description": "Dépôt sauvage Rue des Écoles.",
+    "lat": 48.601426,
+    "lng": 2.468453,
+    "status": "nouveau",
+    "date": "2026-04-09",
+    "severity": "high"
+  }
+]

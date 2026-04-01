@@ -1,12 +1,13 @@
 "use client";
 
-import React, { useState, useCallback, useRef, useEffect } from "react";
-import Map, { Layer, Source, Marker } from "react-map-gl/mapbox";
-import type { MapRef } from "react-map-gl/mapbox";
-import "mapbox-gl/dist/mapbox-gl.css";
+import React, { useState, useCallback, useRef, useMemo } from "react";
+import Map, { Layer, Source, Marker } from "react-map-gl/maplibre";
+import type { MapRef } from "react-map-gl/maplibre";
+import "maplibre-gl/dist/maplibre-gl.css";
 import Link from "next/link";
+import signalementsData from "./signalements-data.json";
 
-const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || "";
+const MAPTILER_KEY = process.env.NEXT_PUBLIC_MAPTILER_KEY || "";
 
 /* ================================================
    Mock Data — Signalements
@@ -22,67 +23,258 @@ interface Signalement {
   severity: "low" | "medium" | "high";
 }
 
-const MOCK_SIGNALEMENTS: Signalement[] = [
-  { id: "S-001", category: "Voirie", description: "Nid de poule profond angle rue Jean Jaurès / Av. Darblay", lat: 48.6145, lng: 2.4835, status: "nouveau", date: "2026-03-31", severity: "high" },
-  { id: "S-002", category: "Propreté", description: "Dépôt sauvage de gravats près du parc Robinson", lat: 48.6120, lng: 2.4790, status: "en_cours", date: "2026-03-30", severity: "medium" },
-  { id: "S-003", category: "Éclairage", description: "Lampadaire éteint depuis 2 semaines, rue Widmer", lat: 48.6160, lng: 2.4850, status: "nouveau", date: "2026-03-29", severity: "medium" },
-  { id: "S-004", category: "Nuisances", description: "Nuisances sonores nocturnes récurrentes, quartier Tarterêts", lat: 48.6100, lng: 2.4900, status: "en_cours", date: "2026-03-28", severity: "low" },
-  { id: "S-005", category: "Voirie", description: "Fissure importante chaussée bd Jean Jaurès", lat: 48.6155, lng: 2.4810, status: "resolu", date: "2026-03-27", severity: "high" },
-  { id: "S-006", category: "Espaces Verts", description: "Arbre tombé bloquant le trottoir, allée des Platanes", lat: 48.6132, lng: 2.4870, status: "nouveau", date: "2026-03-31", severity: "high" },
-  { id: "S-007", category: "Propreté", description: "Poubelles débordantes près de la gare", lat: 48.6140, lng: 2.4760, status: "en_cours", date: "2026-03-30", severity: "medium" },
-  { id: "S-008", category: "Stationnement", description: "Véhicule abandonné depuis 3 mois, rue Champlouis", lat: 48.6170, lng: 2.4820, status: "nouveau", date: "2026-03-31", severity: "low" },
-];
+const MOCK_SIGNALEMENTS: Signalement[] = signalementsData as Signalement[];
 
 /* ================================================
    Heatmap GeoJSON data
    ================================================ */
 const generateHeatmapData = (type: string) => {
-  const basePoints = [
-    { lat: 48.6145, lng: 2.4835, v: 0.9 },
-    { lat: 48.6120, lng: 2.4790, v: 0.7 },
-    { lat: 48.6160, lng: 2.4850, v: 0.6 },
-    { lat: 48.6100, lng: 2.4900, v: 0.8 },
-    { lat: 48.6155, lng: 2.4810, v: 0.5 },
-    { lat: 48.6132, lng: 2.4870, v: 0.9 },
-    { lat: 48.6140, lng: 2.4760, v: 0.4 },
-    { lat: 48.6170, lng: 2.4820, v: 0.3 },
-    { lat: 48.6110, lng: 2.4830, v: 0.6 },
-    { lat: 48.6135, lng: 2.4780, v: 0.7 },
-    { lat: 48.6148, lng: 2.4890, v: 0.5 },
-    { lat: 48.6125, lng: 2.4860, v: 0.8 },
-  ];
+  const typeConfig = HEATMAP_CONFIGS[type as keyof typeof HEATMAP_CONFIGS];
+  const points = typeConfig.categories.length
+    ? MOCK_SIGNALEMENTS.filter((s) => typeConfig.categories.includes(s.category))
+    : MOCK_SIGNALEMENTS;
 
-  // Vary intensity based on type
-  const multiplier = type === "vitesse" ? 1.0 : type === "proprete" ? 0.8 : 0.6;
+  if (points.length === 0) {
+    return null;
+  }
+
+  const distanceKm = (a: { lat: number; lng: number }, b: { lat: number; lng: number }) => {
+    const toRad = (deg: number) => (deg * Math.PI) / 180;
+    const dLat = toRad(b.lat - a.lat);
+    const dLng = toRad(b.lng - a.lng);
+    const lat1 = toRad(a.lat);
+    const lat2 = toRad(b.lat);
+    const sinDLat = Math.sin(dLat / 2);
+    const sinDLng = Math.sin(dLng / 2);
+    const earthRadius = 6371;
+    return 2 * earthRadius * Math.asin(Math.sqrt(sinDLat * sinDLat + Math.cos(lat1) * Math.cos(lat2) * sinDLng * sinDLng));
+  };
+
+  const neighborhoodBoost = (point: Signalement) => {
+    const nearbyCount = points.filter((other) => other.id !== point.id && distanceKm(point, other) <= 0.24).length;
+    return Math.min(0.4, nearbyCount * 0.1);
+  };
+
+  const categoryWeight: Record<string, number> = {
+    Voirie: 1.0,
+    Propreté: 0.85,
+    Éclairage: 0.75,
+    Nuisances: 0.8,
+    Stationnement: 0.65,
+    Pollution: 0.95,
+    Circulation: 1.0,
+    Sécurité: 0.9,
+    "Eau Potable": 0.9,
+    "Espaces Verts": 0.7,
+  };
 
   return {
     type: "FeatureCollection" as const,
-    features: basePoints.map((p, i) => ({
-      type: "Feature" as const,
-      geometry: {
-        type: "Point" as const,
-        coordinates: [p.lng + (Math.sin(i * 1.5) * 0.002), p.lat + (Math.cos(i * 1.2) * 0.001)],
-      },
-      properties: {
-        intensity: p.v * multiplier,
-      },
-    })),
+    features: points
+      .map((point) => {
+        const baseSeverity = point.severity === "high" ? 1.0 : point.severity === "medium" ? 0.72 : 0.45;
+        const statusModifier = point.status === "en_cours" ? 0.18 : point.status === "nouveau" ? 0.1 : -0.08;
+        const categoryModifier = categoryWeight[point.category] ?? 0.8;
+        const densityBoost = neighborhoodBoost(point);
+        const intensity = Math.min(1, Math.max(0.25, baseSeverity * categoryModifier + statusModifier + densityBoost));
+
+        return {
+          type: "Feature" as const,
+          geometry: {
+            type: "Point" as const,
+            coordinates: [point.lng, point.lat],
+          },
+          properties: {
+            intensity,
+          },
+        };
+      })
+      .filter((feature) => feature.properties.intensity > 0),
   };
 };
 
-const HEATMAP_CONFIGS: Record<string, { label: string; colors: string[] }> = {
-  vitesse: {
-    label: "Vitesse excessive",
+type HeatmapType = keyof typeof HEATMAP_CONFIGS;
+
+const FILTER_CATEGORIES = [
+  "all",
+  "Voirie",
+  "Propreté",
+  "Éclairage",
+  "Nuisances",
+  "Stationnement",
+  "Espaces Verts",
+  "Pollution",
+  "Circulation",
+  "Sécurité",
+  "Eau Potable",
+] as const;
+
+const BOUNDARY_SOURCE_ID = "ceorl-boundary-source";
+const HEATMAP_SOURCE_ID = "ceorl-heatmap-source";
+
+const HEATMAP_CONFIGS: Record<string, { label: string; colors: string[]; categories: string[] }> = {
+  global: {
+    label: "Toutes catégories",
+    colors: ["rgba(0,0,0,0)", "#60a5fa", "#38bdf8", "#0ea5e9", "#0369a1"],
+    categories: [],
+  },
+  voirie: {
+    label: "Voirie",
     colors: ["rgba(0,0,0,0)", "#fde68a", "#fb923c", "#ea580c", "#dc2626"],
+    categories: ["Voirie"],
   },
   proprete: {
     label: "Propreté",
     colors: ["rgba(0,0,0,0)", "#a7f3d0", "#34d399", "#059669", "#064e3b"],
+    categories: ["Propreté"],
+  },
+  eclairage: {
+    label: "Éclairage",
+    colors: ["rgba(0,0,0,0)", "#fef08a", "#facc15", "#f59e0b", "#c2410c"],
+    categories: ["Éclairage"],
   },
   nuisances: {
-    label: "Nuisances sonores",
+    label: "Nuisances",
     colors: ["rgba(0,0,0,0)", "#c4b5fd", "#8b5cf6", "#6d28d9", "#4c1d95"],
+    categories: ["Nuisances"],
   },
+  stationnement: {
+    label: "Stationnement",
+    colors: ["rgba(0,0,0,0)", "#d8b4fe", "#c084fc", "#a855f7", "#7e22ce"],
+    categories: ["Stationnement"],
+  },
+  pollution: {
+    label: "Pollution",
+    colors: ["rgba(0,0,0,0)", "#fca5a5", "#f87171", "#ef4444", "#b91c1c"],
+    categories: ["Pollution"],
+  },
+  circulation: {
+    label: "Circulation",
+    colors: ["rgba(0,0,0,0)", "#93c5fd", "#60a5fa", "#3b82f6", "#1d4ed8"],
+    categories: ["Circulation"],
+  },
+};
+
+const CORBEIL_BOUNDARY = {
+  type: "FeatureCollection" as const,
+  features: [
+    {
+      type: "Feature" as const,
+      properties: {},
+      geometry: {
+        type: "Polygon" as const,
+        coordinates: [[
+          [2.4366347, 48.6109217],
+          [2.438989, 48.610519],
+          [2.440592, 48.610565],
+          [2.442994, 48.61],
+          [2.445013, 48.609011],
+          [2.447457, 48.6071751],
+          [2.448611, 48.605762],
+          [2.450149, 48.60519],
+          [2.450416, 48.605107],
+          [2.451001, 48.604938],
+          [2.451694, 48.604737],
+          [2.451944, 48.604748],
+          [2.452534, 48.604813],
+          [2.453512, 48.604488],
+          [2.4548144, 48.6044377],
+          [2.45639, 48.604652],
+          [2.457866, 48.604514],
+          [2.4577041, 48.6042992],
+          [2.4569276, 48.604262],
+          [2.4560757, 48.6041568],
+          [2.4545779, 48.6033969],
+          [2.4527249, 48.6031526],
+          [2.4516662, 48.6030714],
+          [2.4500637, 48.6024642],
+          [2.4496011, 48.601706],
+          [2.4490432, 48.6003404],
+          [2.448997, 48.598795],
+          [2.449453, 48.597824],
+          [2.450715, 48.5953978],
+          [2.4558066, 48.5965638],
+          [2.4590319, 48.5957015],
+          [2.4606491, 48.5956214],
+          [2.4615055, 48.5952224],
+          [2.4636243, 48.5954297],
+          [2.4657566, 48.5928367],
+          [2.4668676, 48.5903792],
+          [2.4682157, 48.5899007],
+          [2.4683672, 48.5890171],
+          [2.4691712, 48.5885702],
+          [2.469373, 48.5875987],
+          [2.46925, 48.586547],
+          [2.4690583, 48.5859041],
+          [2.468975, 48.58522],
+          [2.468859, 48.584602],
+          [2.469025, 48.584223],
+          [2.469175, 48.584035],
+          [2.469877, 48.583812],
+          [2.470371, 48.583743],
+          [2.470597, 48.583502],
+          [2.47055, 48.58334],
+          [2.470301, 48.583092],
+          [2.470312, 48.582921],
+          [2.470663, 48.582448],
+          [2.470763, 48.582113],
+          [2.47067, 48.581816],
+          [2.470536, 48.58133],
+          [2.469674, 48.5809182],
+          [2.4703902, 48.5800683],
+          [2.4694077, 48.5789332],
+          [2.4709211, 48.5788566],
+          [2.4737282, 48.5777946],
+          [2.4758353, 48.5774895],
+          [2.4759793, 48.5759204],
+          [2.4756896, 48.5725041],
+          [2.4770053, 48.5709556],
+          [2.4792966, 48.5704496],
+          [2.4817199, 48.5698256],
+          [2.4781025, 48.5768616],
+          [2.4781935, 48.5781865],
+          [2.4790016, 48.5798878],
+          [2.4793757, 48.5804007],
+          [2.4797664, 48.5803272],
+          [2.482218, 48.582611],
+          [2.4849775, 48.5875552],
+          [2.4853446, 48.5911771],
+          [2.4856749, 48.5975968],
+          [2.4890263, 48.6007136],
+          [2.4906578, 48.6027721],
+          [2.4907583, 48.6065402],
+          [2.4917252, 48.60976],
+          [2.4922688, 48.6104439],
+          [2.4908844, 48.6110599],
+          [2.4903331, 48.6118309],
+          [2.4893329, 48.6128567],
+          [2.4877206, 48.6138204],
+          [2.4868894, 48.614641],
+          [2.4866234, 48.6153456],
+          [2.4864431, 48.6157466],
+          [2.486159, 48.6155197],
+          [2.4858386, 48.6152628],
+          [2.485251, 48.6154831],
+          [2.4846276, 48.6158734],
+          [2.484515, 48.61673],
+          [2.4835088, 48.6171679],
+          [2.4834038, 48.6177265],
+          [2.482949, 48.6177684],
+          [2.4814903, 48.6189325],
+          [2.4792671, 48.6211789],
+          [2.4766647, 48.6211742],
+          [2.4727223, 48.6236776],
+          [2.4646312, 48.6232649],
+          [2.4565753, 48.621735],
+          [2.4542067, 48.6196601],
+          [2.4424806, 48.6134219],
+          [2.4389268, 48.6141161],
+          [2.4367415, 48.6110639],
+          [2.4366347, 48.6109217]
+        ]],
+      },
+    },
+  ],
 };
 
 /* ================================================
@@ -107,6 +299,10 @@ const categoryColors: Record<string, string> = {
   Nuisances: "#ef4444",
   "Espaces Verts": "#10b981",
   Stationnement: "#3b82f6",
+  Pollution: "#c026d3",
+  Circulation: "#0284c7",
+  Sécurité: "#0f766e",
+  "Eau Potable": "#2563eb",
 };
 
 /* ================================================
@@ -114,16 +310,25 @@ const categoryColors: Record<string, string> = {
    ================================================ */
 export default function AdminDashboard() {
   const mapRef = useRef<MapRef>(null);
-  const [activeHeatmap, setActiveHeatmap] = useState<string | null>(null);
+  const [activeHeatmap, setActiveHeatmap] = useState<HeatmapType | null>(null);
   const [selectedSignalement, setSelectedSignalement] = useState<Signalement | null>(null);
   const [sidebarTab, setSidebarTab] = useState<"signalements" | "analytics">("signalements");
-  const [filterCategory, setFilterCategory] = useState<string>("all");
+  const [filterCategory, setFilterCategory] = useState<(typeof FILTER_CATEGORIES)[number]>("all");
   const [showMarkers, setShowMarkers] = useState(true);
   const [mapLoaded, setMapLoaded] = useState(false);
 
-  const filteredSignalements = filterCategory === "all"
-    ? MOCK_SIGNALEMENTS
-    : MOCK_SIGNALEMENTS.filter((s) => s.category === filterCategory);
+  const filteredSignalements = useMemo(
+    () =>
+      filterCategory === "all"
+        ? MOCK_SIGNALEMENTS
+        : MOCK_SIGNALEMENTS.filter((s) => s.category === filterCategory),
+    [filterCategory]
+  );
+
+  const heatmapGeoJSON = useMemo(
+    () => (activeHeatmap ? generateHeatmapData(activeHeatmap) : null),
+    [activeHeatmap]
+  );
 
   const flyToSignalement = useCallback((s: Signalement) => {
     setSelectedSignalement(s);
@@ -135,7 +340,6 @@ export default function AdminDashboard() {
     });
   }, []);
 
-  const heatmapGeoJSON = activeHeatmap ? generateHeatmapData(activeHeatmap) : null;
 
   // Stats
   const stats = {
@@ -206,7 +410,7 @@ export default function AdminDashboard() {
             <div className="p-4">
               {/* Filter */}
               <div className="flex flex-wrap gap-1.5 mb-4">
-                {["all", "Voirie", "Propreté", "Éclairage", "Nuisances"].map((cat) => (
+                {FILTER_CATEGORIES.map((cat) => (
                   <button
                     key={cat}
                     onClick={() => setFilterCategory(cat)}
@@ -290,6 +494,11 @@ export default function AdminDashboard() {
                     </button>
                   ))}
                 </div>
+                {activeHeatmap && !heatmapGeoJSON && (
+                  <div className="mt-3 rounded-2xl border border-yellow-100 bg-yellow-50 p-3 text-xs text-yellow-600">
+                    Aucune donnée de signalement disponible pour cette couche. Désactivez la couche ou changez de filtre.
+                  </div>
+                )}
               </div>
 
               {/* Layer toggles */}
@@ -343,7 +552,7 @@ export default function AdminDashboard() {
 
       {/* ========== MAP ========== */}
       <div className="flex-1 relative">
-        {!MAPBOX_TOKEN && (
+        {!MAPTILER_KEY && (
           <div className="absolute inset-0 z-50 bg-gray-950 flex items-center justify-center">
             <div className="bg-white rounded-2xl p-8 max-w-md text-center shadow-2xl">
               <div className="w-16 h-16 rounded-full bg-orange-50 border-2 border-orange-200 flex items-center justify-center mx-auto mb-4">
@@ -351,12 +560,12 @@ export default function AdminDashboard() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z" />
                 </svg>
               </div>
-              <h2 className="text-lg font-bold text-gray-900 mb-2">Token Mapbox requis</h2>
+              <h2 className="text-lg font-bold text-gray-900 mb-2">Token MapTiler requis</h2>
               <p className="text-sm text-gray-500 mb-4">
                 Ajoutez votre token dans le fichier <code className="text-orange-500 bg-orange-50 px-1.5 py-0.5 rounded text-xs">.env.local</code>
               </p>
               <code className="block text-xs bg-gray-50 border border-gray-200 rounded-lg p-3 text-left text-gray-600 font-mono">
-                NEXT_PUBLIC_MAPBOX_TOKEN=pk.eyJ1...
+                NEXT_PUBLIC_MAPTILER_KEY=YOUR_MAPTILER_KEY
               </code>
             </div>
           </div>
@@ -372,9 +581,7 @@ export default function AdminDashboard() {
             bearing: -10,
           }}
           style={{ width: "100%", height: "100%" }}
-          mapStyle="mapbox://styles/mapbox/dark-v11"
-          mapboxAccessToken={MAPBOX_TOKEN}
-          antialias={true}
+          mapStyle={`https://api.maptiler.com/maps/019d49e4-82bf-7a39-8641-1f403ad436a4/style.json?key=${MAPTILER_KEY}`}
           attributionControl={false}
           onLoad={() => setMapLoaded(true)}
         >
@@ -400,9 +607,30 @@ export default function AdminDashboard() {
             }}
           />
 
+          {/* Corbeil-Essonnes boundary */}
+          <Source key={BOUNDARY_SOURCE_ID} id={BOUNDARY_SOURCE_ID} type="geojson" data={CORBEIL_BOUNDARY}>
+            <Layer
+              id="boundary-fill"
+              type="fill"
+              paint={{
+                "fill-color": "rgba(251, 146, 60, 0.08)",
+                "fill-outline-color": "#fb923c",
+              }}
+            />
+            <Layer
+              id="boundary-line"
+              type="line"
+              paint={{
+                "line-color": "#fb923c",
+                "line-width": 3,
+                "line-opacity": 0.8,
+              }}
+            />
+          </Source>
+
           {/* Heatmap Layer */}
           {activeHeatmap && heatmapGeoJSON && (
-            <Source id="heatmap-source" type="geojson" data={heatmapGeoJSON}>
+            <Source key={HEATMAP_SOURCE_ID} id={HEATMAP_SOURCE_ID} type="geojson" data={heatmapGeoJSON}>
               <Layer
                 id="heatmap-layer"
                 type="heatmap"
