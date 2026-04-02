@@ -1,4 +1,9 @@
 import Link from "next/link";
+import KpiBoard from "../components/KpiBoard";
+import FeedbackModule from "../components/FeedbackModule";
+import TimelineSuivi from "../components/TimelineSuivi";
+import SatisfactionSection from "../components/SatisfactionSection";
+import ProactiveSection from "../components/ProactiveSection";
 
 export default function HomePage() {
   return (
@@ -14,15 +19,16 @@ export default function HomePage() {
         <div className="mb-8 animate-fade-in-up">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-50 border border-orange-200 text-orange-600 text-xs font-semibold uppercase tracking-widest mb-6">
             <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
-            Plateforme Active
+            Reporting dans une smart city
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 tracking-tight">
-            CEORL
-          </h1>
+          <img src="/Logoblanc+textnoir.svg" alt="CEORL logo with white design elements and black text reading CEORL" className="w-32 mx-auto mb-6" />
           <p className="mt-3 text-lg text-gray-500 font-light">
-            Hyperviseur Smart City — <span className="text-orange-500 font-medium">Corbeil-Essonnes</span>
+            Semaine ImagIn' — <span className="text-orange-500 font-medium">Corbeil-Essonnes</span>
           </p>
         </div>
+
+        {/* KPIs */}
+        <KpiBoard />
 
         {/* Dual Interface Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mt-10 animate-fade-in-up stagger-2">
@@ -70,6 +76,12 @@ export default function HomePage() {
             </div>
           </Link>
         </div>
+
+        {/* Feedback & Suivi */}
+        <FeedbackModule />
+        <TimelineSuivi />
+        <SatisfactionSection />
+        <ProactiveSection />
 
         <p className="mt-12 text-xs text-gray-400 animate-fade-in-up stagger-3">
           © {new Date().getFullYear()} Mairie de Corbeil-Essonnes — Propulsé par CEORL

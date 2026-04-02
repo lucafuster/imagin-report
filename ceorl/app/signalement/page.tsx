@@ -10,6 +10,7 @@ const CATEGORIES = [
   { id: "nuisances", label: "Nuisances", icon: "📢", color: "bg-red-100 text-red-700 border-red-200" },
   { id: "espaces_verts", label: "Espaces Verts", icon: "🌳", color: "bg-emerald-100 text-emerald-700 border-emerald-200" },
   { id: "stationnement", label: "Stationnement", icon: "🅿️", color: "bg-blue-100 text-blue-700 border-blue-200" },
+  { id: "autre", label: "Autre", icon: "❓", color: "bg-gray-100 text-gray-700 border-gray-200" },
 ];
 
 export default function SignalementPage() {
@@ -19,6 +20,9 @@ export default function SignalementPage() {
   const [isLocating, setIsLocating] = useState(false);
   const [location, setLocation] = useState<{ lat: number; lng: number } | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  const [email, setEmail] = useState("");
+  const [chooseLocationManually, setChooseLocationManually] = useState(false);
+  const [manualAddress, setManualAddress] = useState("");
 
   const handleGeolocate = () => {
     setIsLocating(true);
@@ -41,6 +45,13 @@ export default function SignalementPage() {
   };
 
   const handleSubmit = () => {
+    // Here you would typically send the data to your backend
+    console.log({
+      category: selectedCategory,
+      description,
+      location: chooseLocationManually ? manualAddress : location,
+      email: email || null,
+    });
     setSubmitted(true);
   };
 
@@ -57,6 +68,7 @@ export default function SignalementPage() {
           <p className="text-gray-500 text-sm mb-8">
             Merci pour votre contribution. Nos équipes ont été notifiées et prendront en charge votre signalement dans les meilleurs délais.
           </p>
+
           <Link
             href="/"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-orange-500 text-white font-medium text-sm hover:bg-orange-600 transition-colors"
@@ -64,6 +76,19 @@ export default function SignalementPage() {
             Retour à l&apos;accueil
           </Link>
         </div>
+          {/* Email for follow-up */}
+            <div className="mt-4">
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                Email (optionnel - pour suivre votre signalement)
+              </label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="votre.email@example.com"
+                className="w-full p-3 rounded-lg border-2 border-gray-200 bg-white text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-orange-500 transition-colors"
+              />
+            </div>
       </main>
     );
   }
@@ -173,7 +198,7 @@ export default function SignalementPage() {
                   <div className="w-10 h-10 border-2 border-orange-500 border-t-transparent rounded-full animate-spin" />
                   <p className="text-sm text-gray-500">Localisation en cours…</p>
                 </div>
-              ) : location ? (
+              ) : location && !chooseLocationManually ? (
                 <div className="flex flex-col items-center gap-3">
                   <div className="w-12 h-12 rounded-full bg-green-50 border-2 border-green-200 flex items-center justify-center">
                     <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -185,6 +210,35 @@ export default function SignalementPage() {
                   <p className="text-xs text-gray-400 font-mono">
                     {location.lat.toFixed(4)}, {location.lng.toFixed(4)}
                   </p>
+                  <button
+                    onClick={() => setChooseLocationManually(true)}
+                    className="text-orange-500 text-sm font-medium hover:underline mt-2"
+                  >
+                    Choisir un autre lieu
+                  </button>
+                </div>
+              ) : chooseLocationManually ? (
+                <div className="flex flex-col gap-3">
+                  <div className="w-12 h-12 rounded-full bg-blue-50 border-2 border-blue-200 flex items-center justify-center mx-auto">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+                    </svg>
+                  </div>
+                  <p className="text-sm text-gray-700 font-medium text-center">Adresse manuelle</p>
+                  <input
+                    type="text"
+                    value={manualAddress}
+                    onChange={(e) => setManualAddress(e.target.value)}
+                    placeholder="Entrez l'adresse exacte..."
+                    className="w-full p-3 rounded-lg border-2 border-gray-200 bg-white text-sm text-gray-900 placeholder:text-gray-400 focus:outline-none focus:border-orange-500 transition-colors"
+                  />
+                  <button
+                    onClick={() => setChooseLocationManually(false)}
+                    className="text-orange-500 text-sm font-medium hover:underline"
+                  >
+                    Utiliser la géolocalisation
+                  </button>
                 </div>
               ) : (
                 <button
@@ -202,8 +256,11 @@ export default function SignalementPage() {
               <div className="space-y-1 text-sm text-gray-700">
                 <p><span className="text-gray-400">Catégorie :</span> {CATEGORIES.find((c) => c.id === selectedCategory)?.label}</p>
                 <p className="truncate"><span className="text-gray-400">Description :</span> {description.slice(0, 80)}…</p>
+                <p><span className="text-gray-400">Localisation :</span> {chooseLocationManually ? manualAddress || "Adresse manuelle" : "Géolocalisation"}</p>
               </div>
             </div>
+
+            
 
             <div className="flex gap-3 mt-6">
               <button
@@ -214,7 +271,7 @@ export default function SignalementPage() {
               </button>
               <button
                 onClick={handleSubmit}
-                disabled={!location}
+                disabled={!(location || (chooseLocationManually && manualAddress.trim()))}
                 className="flex-[2] py-3 rounded-xl bg-orange-500 text-white font-medium text-sm disabled:opacity-40 disabled:cursor-not-allowed hover:bg-orange-600 transition-colors"
               >
                 Envoyer le signalement
